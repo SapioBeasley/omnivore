@@ -1,6 +1,6 @@
 <?php
 
-namespace Sapioweb\Ominvore;
+namespace Sapioweb\Omnivore;
 
 use Illuminate\Support\ServiceProvider;
 
