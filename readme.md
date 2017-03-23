@@ -1,20 +1,30 @@
-## Class OmnivoreTickets
+# Class OmnivoreTickets
 
-Place in ENV
+Place these values into your .ENV
+
 ```
-env('OMNIVORE_API_URL');
-env('OMNIVORE_API_KEY');
-env('OMNIVORE_LOCATION_ID');
-env('ES_FROM', 0);
-env('ES_SIZE', 10000);
-env('OMNIVORE_API_URL');
+OMNIVORE_API_URL
+OMNIVORE_API_KEY
+OMNIVORE_LOCATION_ID
+ES_FROM
+ES_SIZE
+OMNIVORE_API_URL
 ```
 
-Available Functions
+### Available Functions
 
+List tickets for location
 ```
 function ticketList($locationId)
+```
+
+Open a new ticket
+```
 function ticketOpen($locationId, $content)
+```
+
+Retrieve data for a specific ticket
+```
 function ticketRetrieve($locationId, $ticketId)
 function ticketVoid($locationId, $ticketId)
 function ticketDiscountList($locationId, $ticketId)
@@ -37,14 +47,14 @@ function paymentGiftCard($locationId, $ticketId, $content)
 function paymentCash($locationId, $ticketId, $content)
 ```
 
-## Class OmnivoreTables
+# Class OmnivoreTables
 
 ```
 function tableList($locationId)
 function tableRetrieve($locationId, $tableId)
 ```
 
-## Class OmnivoreGeneral
+# Class OmnivoreGeneral
 
 ```
 function locationList()
