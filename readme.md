@@ -72,31 +72,31 @@ return response()->json($ticketDiscountRetrieve);
 List items on a ticket
 ```php
 $ticketItemList = $this->omnivoreTickets->ticketItemList($locationId, $ticketId)
-return respons$ticketItemListe()->json();
+return response()->json($ticketItemList);
 ```
 
 Add an item to a ticket
 ```php
 $ticketItemAdd = $this->omnivoreTickets->ticketItemAdd($locationId, $ticketId, $content)
-return respon$ticketItemAddse()->json();
+return response()->json($ticketItemAdd);
 ```
 
 Retrieve an item from a ticket
 ```php
 $ticketItemRetrieve = $this->omnivoreTickets->ticketItemRetrieve($locationId, $ticketId, $ticketItemId)
-return response()-$ticketItemRetrieve>json();
+return response()->json($ticketItemRetrieve);
 ```
 
 Void an item from a ticket
 ```php
 $ticketItemVoid = $this->omnivoreTickets->ticketItemVoid($locationId, $ticketId, $ticketItemId)
-return respons$ticketItemVoide()->json();
+return response()->json($ticketItemVoid);
 ```
 
 List modifiers form a ticket
 ```php
 $ticketItemModifierList = $this->omnivoreTickets->ticketItemModifierList($locationId, $ticketId, $ticketItemId)
-return response()->jso$ticketItemModifierListn();
+return response()->json($ticketItemModifierList);
 ```
 
 Retrieve a modifier form a ticket
@@ -108,7 +108,7 @@ return response()->json($ticketItemModifierRetrieve);
 List dicounts on a ticket
 ```php
 $ticketItemDiscountList = $this->omnivoreTickets->ticketItemDiscountList($locationId, $ticketId, $ticketItemId)
-return response()->jso$ticketItemDiscountListn();
+return response()->json($ticketItemDiscountList);
 ```
 
 Retrieve a discount from a ticket
@@ -120,43 +120,43 @@ return response()->json($ticketItemDiscountRetrieve);
 List payments
 ```php
 $paymentList = $this->omnivoreTickets->paymentList($locationId, $ticketId)
-return resp$paymentListonse()->json();
+return response()->json($paymentList);
 ```
 
 Retrieve a payment
 ```php
 $paymentRetrieve = $this->omnivoreTickets->paymentRetrieve($locationId, $ticketId, $paymentId)
-return response$paymentRetrieve()->json();
+return response()->json($paymentRetrieve);
 ```
 
 Make a payment where a card is not present
 ```php
 $paymentCardNotPresent = $this->omnivoreTickets->paymentCardNotPresent($locationId, $ticketId, $content)
-return response()->js$paymentCardNotPresenton();
+return response()->json($paymentCardNotPresent);
 ```
 
 Make a payment where a card is present
 ```php
 $paymentCardPresent = $this->omnivoreTickets->paymentCardPresent($locationId, $ticketId, $content)
-return response()-$paymentCardPresent>json();
+return response()->json($paymentCardPresent);
 ```
 
 Make a payment with a 3rd party
 ```php
 $payment3rdParty = $this->omnivoreTickets->payment3rdParty($locationId, $ticketId, $content)
-return response$payment3rdParty()->json();
+return response()->json($payment3rdParty);
 ```
 
 Make a payment with a card
 ```php
 $paymentGiftCard = $this->omnivoreTickets->paymentGiftCard($locationId, $ticketId, $content)
-return response$paymentGiftCard()->json();
+return response()->json($paymentGiftCard);
 ```
 
 Make a payment with cash
 ```php
 $paymentCash = $this->omnivoreTickets->paymentCash($locationId, $ticketId, $content)
-return resp$paymentCashonse()->json();
+return response()->json($paymentCash);
 ```
 
 # Class OmnivoreTables
