@@ -165,14 +165,16 @@ Interact with tables of claimed locations from the POS.
 
 ### Available Functions
 
+List tables of claimed locations
 ```php
-function tableList($locationId)
-return response()->json(
+$tableList = $this->omnivoreTables->tableList($locationId)
+return response()->json($tableList);
 ```
 
+Retrieve data for a specific table
 ```php
-function tableRetrieve($locationId, $tableId)
-return response()->json(
+$tableRetrieve = $this->omnivoreTables->tableRetrieve($locationId, $tableId)
+return response()->json($tableRetrieve);
 ```
 
 # Class OmnivoreGeneral
@@ -187,25 +189,122 @@ $locations = $this->omnivoreGeneral->locationList();
 return response()->json($locations);
 ```
 
+Retrieve information about a location
+```php
+$locationRetrieve = $this->omnivoreGeneral->locationRetrieve($locationId)
+return response()->json($locationRetrieve);
 ```
-function locationRetrieve($locationId)
-function employeeList($locationId)
-function employeeRetrieve($locationId, $employeeId)
-function orderTypeList($locationId)
-function orderTypeRetrieve($locationId, $orderTypeId)
-function tenderTypeList($locationId)
-function tenderTypeRetrieve($locationId, $tenderTypeId)
-function revenueCenterList($locationId)
-function revenueCenterRetrieve($locationId, $revenueCenterId)
-function discountList($locationId)
-function discountRetrieve($locationId, $discountId)
-function menu($locationId)
-function categoryList($locationId)
-function categoryRetrieve($locationId, $categoryId)
-function menuItemList($locationId)
-function menuItemRetrieve($locationId, $menuItemId)
-function modifierList($locationId)
-function modifierRetrieve($locationId, $modifierId)
-function modifierGroupList($locationId, $menuItemId)
-function modifierGroupRetrieve($locationId, $menuItemId, $modifierGroupId)
+
+List employees of a location
+```php
+$employeeList = $this->omnivoreGeneral->employeeList($locationId)
+return response()->json($employeeList);
+```
+
+Retrieve data of a specific location
+```php
+$employeeRetrieve = $this->omnivoreGeneral->employeeRetrieve($locationId, $employeeId)
+return response()->json($employeeRetrieve);
+```
+
+List location types
+```php
+$orderTypeList = $this->omnivoreGeneral->orderTypeList($locationId)
+return response()->json($orderTypeList);
+```
+
+Retrieve a locations type
+```php
+$orderTypeRetrieve = $this->omnivoreGeneral->orderTypeRetrieve($locationId, $orderTypeId)
+return response()->json($orderTypeRetrieve);
+```
+
+List the types of tender the location accepts
+```php
+$tenderTypeList = $this->omnivoreGeneral->tenderTypeList($locationId)
+return response()->json($tenderTypeList);
+```
+
+Retrive the tender type
+```php
+$tenderTypeRetrieve = $this->omnivoreGeneral->tenderTypeRetrieve($locationId, $tenderTypeId)
+return response()->json($tenderTypeRetrieve);
+```
+
+List a locations revenue centers
+```php
+$revenueCenterList = $this->omnivoreGeneral->revenueCenterList($locationId)
+return response()->json($revenueCenterList);
+```
+
+Retrieve information of a payment center
+```php
+$revenueCenterRetrieve = $this->omnivoreGeneral->revenueCenterRetrieve($locationId, $revenueCenterId)
+return response()->json($revenueCenterRetrieve);
+```
+
+List the discounts of a location
+```php
+$discountList = $this->omnivoreGeneral->discountList($locationId)
+return response()->json($discountList);
+```
+
+Retrieve the discount
+```php
+$discountRetrieve = $this->omnivoreGeneral->discountRetrieve($locationId, $discountId)
+return response()->json($discountRetrieve);
+```
+
+Grab the menu from POS
+```php
+$menu = $this->omnivoreGeneral->menu($locationId)
+return response()->json($menu);
+```
+
+List the menu categories
+```php
+$categoryList = $this->omnivoreGeneral->categoryList($locationId)
+return response()->json($categoryList);
+```
+
+Retrieve a category
+```php
+$categoryRetrieve = $this->omnivoreGeneral->categoryRetrieve($locationId, $categoryId)
+return response()->json($categoryRetrieve);
+```
+
+List items in a menu
+```php
+$menuItemList = $this->omnivoreGeneral->menuItemList($locationId)
+return response()->json($menuItemList);
+```
+
+Retrieve a menu item
+```php
+$menuItemRetrieve = $this->omnivoreGeneral->menuItemRetrieve($locationId, $menuItemId)
+return response()->json($menuItemRetrieve);
+```
+
+List location modifiers 
+```php
+$modifierList = $this->omnivoreGeneral->modifierList($locationId)
+return response()->json($modifierList);
+```
+
+Retrieve a modifier
+```php
+$modifierRetrieve = $this->omnivoreGeneral->modifierRetrieve($locationId, $modifierId)
+return response()->json($modifierRetrieve);
+```
+
+List modifier groups
+```php
+$modifierGroupList = $this->omnivoreGeneral->modifierGroupList($locationId, $menuItemId)
+return response()->json($modifierGroupList);
+```
+
+Retrieve a modifier group
+```php
+$modifierGroupRetrieve = $this->omnivoreGeneral->modifierGroupRetrieve($locationId, $menuItemId, $modifierGroupId)
+return response()->json($modifierGroupRetrieve);
 ```
