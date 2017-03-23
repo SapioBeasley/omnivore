@@ -11,6 +11,15 @@ ES_SIZE
 OMNIVORE_API_URL
 ```
 
+Place into the construct that will utilize the wrapper
+```
+$this->omnivoreGeneral = new OmnivoreGeneral;
+
+$this->omnivoreTickets = new OmnivoreTickets;
+
+$this->omnivoreTables = new OmnivoreTables;
+```
+
 ### Available Functions
 
 List tickets for location
@@ -56,8 +65,14 @@ function tableRetrieve($locationId, $tableId)
 
 # Class OmnivoreGeneral
 
+List all locations claimed.
 ```
-function locationList()
+$locations = $this->omnivoreGeneral->locationList();
+
+return response()->json($locations);
+```
+
+```
 function locationRetrieve($locationId)
 function employeeList($locationId)
 function employeeRetrieve($locationId, $employeeId)
