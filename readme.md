@@ -66,7 +66,7 @@ function tableRetrieve($locationId, $tableId)
 # Class OmnivoreGeneral
 
 List all locations claimed.
-```
+```php
 $locations = $this->omnivoreGeneral->locationList();
 
 return response()->json($locations);
