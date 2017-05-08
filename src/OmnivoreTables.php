@@ -31,7 +31,7 @@ class OmnivoreTables
 
     function tableList($locationId)
     {
-        $res = $this->client->request('GET', $this->omnivoreApiUrl . 'locations/' . $locationId . '/tables?s', [
+        $res = $this->client->request('GET', $this->omnivoreApiUrl . 'locations/' . $locationId . '/tables', [
             'headers' => [
                 'Api-Key' => $this->omnivoreApiKey
             ]
